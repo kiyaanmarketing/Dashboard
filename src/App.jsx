@@ -133,6 +133,22 @@ function App() {
               <span className="btn-icon">🌴</span>
               <span className="btn-text">View TheViewPalm</span>
             </button>
+              {/* Button 3 */}
+            <button 
+              className="nav-card-btn" 
+              onClick={() => setSelectedComponent('fareastflora')}
+            >
+              <span className="btn-icon">📦</span>
+              <span className="btn-text">fareastflora</span>
+            </button>
+              {/* Button 4 */}
+            <button 
+              className="nav-card-btn" 
+              onClick={() => setSelectedComponent('xcite')}
+            >
+              <span className="btn-icon">📦</span>
+              <span className="btn-text">xcite</span>
+            </button>
           </div>
         </div>
       ) : (
@@ -141,11 +157,11 @@ function App() {
           {selectedComponent === 'mypayloads' && (
             <>
             <ClicksSummary 
-            dataUrl="https://tracktraffics.com/api/mypayloads"
+            dataUrl="https://tracktraffics.com/api/get?collection=mypayloads"
               goHome={handleBackToHome}
             />
             <PayloadTable
-              dataUrl="https://tracktraffics.com/api/mypayloads"
+              dataUrl="https://tracktraffics.com/api/get?collection=mypayloads"
               goHome={handleBackToHome}
             />
             </>
@@ -154,15 +170,41 @@ function App() {
           {selectedComponent === 'mytheviewpalm' && (
             <>
              <ClicksSummary 
-            dataUrl="https://tracktraffics.com/api/mytheviewpalm"
+            dataUrl="https://tracktraffics.com/api/get?collection=mytheviewpalm"
               goHome={handleBackToHome}
             />
             <PayloadTable
-              dataUrl="https://tracktraffics.com/api/mytheviewpalm"
+              dataUrl="https://tracktraffics.com/api/get?collection=mytheviewpalm"
               goHome={handleBackToHome}
             />
             </>
           )}
+            {selectedComponent === 'fareastflora' && (
+            <>
+             <ClicksSummary 
+            dataUrl="https://tracktraffics.com/api/get?collection=fareastflora"
+              goHome={handleBackToHome}
+            />
+            <PayloadTable
+              dataUrl="https://tracktraffics.com/api/get?collection=fareastflora"
+              goHome={handleBackToHome}
+            />
+            </>
+          )}
+
+            {selectedComponent === 'xcite' && (
+            <>
+             <ClicksSummary 
+            dataUrl="https://tracktraffics.com/api/get?collection=xcite"
+              goHome={handleBackToHome}
+            />
+            <PayloadTable
+              dataUrl="https://tracktraffics.com/api/get?collection=xcite"
+              goHome={handleBackToHome}
+            />
+            </>
+          )}
+
         </div>
       )}
     </div>
