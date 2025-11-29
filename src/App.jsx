@@ -195,11 +195,11 @@ function App() {
             {selectedComponent === 'xcite' && (
             <>
              <ClicksSummary 
-            dataUrl="https://tracktraffics.com/api/get?collection=xcite"
+            dataUrl="https://api.dicountshop.com/api/get?collection=xcite"
               goHome={handleBackToHome}
             />
             <PayloadTable
-              dataUrl="https://tracktraffics.com/api/get?collection=xcite"
+              dataUrl="https://api.dicountshop.com/api/get?collection=xcite"
               goHome={handleBackToHome}
             />
             </>
