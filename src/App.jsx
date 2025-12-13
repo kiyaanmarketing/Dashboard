@@ -149,6 +149,25 @@ function App() {
               <span className="btn-icon">📦</span>
               <span className="btn-text">xcite</span>
             </button>
+
+           {/* Button 5 */}
+            <button 
+              className="nav-card-btn" 
+              onClick={() => setSelectedComponent('myatulya')}
+            >
+              <span className="btn-icon">📦</span>
+              <span className="btn-text">myatulya</span>
+            </button>
+
+         {/* Button 6 */}
+            <button 
+              className="nav-card-btn" 
+              onClick={() => setSelectedComponent('wonderchef')}
+            >
+              <span className="btn-icon">📦</span>
+              <span className="btn-text">wonderchef</span>
+            </button>
+
           </div>
         </div>
       ) : (
@@ -200,6 +219,32 @@ function App() {
             />
             <PayloadTable
               dataUrl="https://api.dicountshop.com/api/get?collection=xcite"
+              goHome={handleBackToHome}
+            />
+            </>
+          )}
+
+           {selectedComponent === 'myatulya' && (
+            <>
+             <ClicksSummary 
+            dataUrl="https://api.dicountshop.com/api/get?collection=myatulya"
+              goHome={handleBackToHome}
+            />
+            <PayloadTable
+              dataUrl="https://api.dicountshop.com/api/get?collection=myatulya"
+              goHome={handleBackToHome}
+            />
+            </>
+          )}
+
+            {selectedComponent === 'wonderchef' && (
+            <>
+             <ClicksSummary 
+            dataUrl="https://api.dicountshop.com/api/get?collection=wonderchef"
+              goHome={handleBackToHome}
+            />
+            <PayloadTable
+              dataUrl="https://api.dicountshop.com/api/get?collection=wonderchef"
               goHome={handleBackToHome}
             />
             </>
